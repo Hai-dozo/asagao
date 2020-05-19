@@ -1,0 +1,5 @@
+class Member < ApplicationRecord
+
+
+    
+end
