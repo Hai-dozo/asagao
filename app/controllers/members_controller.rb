@@ -22,7 +22,12 @@ class MembersController < ApplicationController
     end
 
     def create
-        
+        @member = Member.new(params[:member])
+        if @member.save
+            redirect_to @member, notice: "会員を登録しました。"
+        else
+            render "new"
+        end
     end
 
     def update

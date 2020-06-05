@@ -1,3 +1,4 @@
+<%= render "shared/errors", obj: @member %>
 <table class="attr">
     <tr>
         <th><%= form.label :number, "背番号" %></th>
@@ -16,7 +17,7 @@
         <td>
             <%= form.radio_button :sex, 1%>
             <%= form.label :sex_1, "男" %>
-            <%= form.radio_butoon :sex, 2%>
+            <%= form.radio_button :sex, 2%>
             <%= form.label :sex_2, "女" %>
         </td>
     </tr>
