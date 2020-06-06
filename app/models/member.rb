@@ -1,10 +1,13 @@
 class Member < ApplicationRecord
+    has_secure_password
+
     validates :number, presence: true,
         numericality: {
             only_integer: true,
             greater_than: 0,
             less_than: 100,
-            allow_blank: true
+            allow_blank: true,
+            message: :invalid_member_name
         },
         uniqueness: true
     
@@ -17,6 +20,7 @@ class Member < ApplicationRecord
         length: { maximum: 20 }
 
     validates :email, email: { allow_blank: true }
+
 
 
     class << self
