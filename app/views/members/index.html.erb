@@ -37,3 +37,7 @@
 <% else %>
     <p>会員情報がありません</p>
 <% end %>
+
+<% @members.each do |member| %>
+<%= member.full_name %>
+<% end %>

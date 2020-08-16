@@ -3,7 +3,7 @@ class MembersController < ApplicationController
 
     # 会員一覧
     def index
-        @members = Member.order("number") # numberを昇順で表示
+        @members = Member.order("id") # numberを昇順で表示
     end
 
     def search
