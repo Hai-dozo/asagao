@@ -13,6 +13,7 @@ class Article < ApplicationRecord
         @no_expiration = val.in?([true, "1"]) 
     end
 
+    # p.340
     before_validation do
         self.expired_at = nil if @no_expiration
     end

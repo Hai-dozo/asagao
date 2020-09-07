@@ -38,6 +38,10 @@ gem 'email_validator', '~>1.6'
 # Japanese error messages https://github.com/svenfuchs/rails-i18n
 gem 'rails-i18n', '~>5.1'
 
+# ページネーション
+gem 'kaminari'
+gem 'kaminari-i18n'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
