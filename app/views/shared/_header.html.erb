@@ -12,7 +12,7 @@
     <ul>
         <%= menu_link_to "Top", :root %>
         <%= menu_link_to "News", :articles %>
-        <%= menu_link_to "Blog",  "#" %>
+        <%= menu_link_to "Blog",  :entries %>
         <% if current_member %>
             <%= menu_link_to "Members", :members %>
             <%= menu_link_to "Admin", "#" %>
