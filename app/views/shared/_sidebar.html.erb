@@ -6,7 +6,6 @@
     articles = Article.visible.order(released_at: :desc).limit(5)
     articles = articles.open_to_the_public unless current_member
 %>
-
 <ul>
     <% articles.each do |article| %>
         <li><%= link_to article.title, article %></li>
@@ -15,7 +14,16 @@
 
 <h2>会員のブログ</h2>
 <ul>
-    <% 5.times do |i| %>
-        <li><%= link_to "ブログの見出し", "#" %></li>
-    <% end %>
+    <%
+        entries = Entry.readable_for(current_member)
+            .order(posted_at: :desc).limit(5)
+    %>
+    <ul>
+        <% entries.each do |entry| %>
+            <li>
+                <%= link_to entry.title, entry %>
+                by <%= link_to entry.author.name, [entry.author, :entries] %>
+            </li>
+        <% end %>
+    </ul>
 </ul>
