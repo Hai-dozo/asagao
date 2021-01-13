@@ -1,4 +1,7 @@
 # README
+1. `git clone https://~~`
+2. `bin/rails db:migrate RAILS_ENV=development`
+3. `bin/rails db:seed`
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
